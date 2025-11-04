@@ -47,7 +47,7 @@ body {
   position: absolute;
   width: 350px;
   height: 350px;
-  background: linear-gradient(135deg, #ff0066, #5500ff);
+  background: linear-gradient(135deg, #00ff22, #5500ff);
   filter: blur(120px);
   animation: float 8s infinite alternate ease-in-out;
 }
@@ -62,4 +62,73 @@ body {
   padding: 80px;
   text-align: center;
   background: #111;
+}
+
+#contact {
+  padding: 80px;
+  text-align: center;
+  background: #0f0f0f;
+}
+
+#contact h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Градиентные кнопки */
+.btn-social {
+  padding: 14px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #00ff55, #6d00ff);
+  transition: 0.4s;
+}
+
+.btn-social:hover {
+  transform: scale(1.12);
+  filter: brightness(130%);
+  box-shadow: 0 0 20px rgba(0, 255, 64, 0.7);
+}
+
+/* Анимация появления блоков */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.9s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Анимированный текст */
+.title {
+  animation: glow 3s infinite alternate ease-in-out;
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 5px #3700ff; }
+  100% { text-shadow: 0 0 25px #1adf55, 0 0 40px #5500ff; }
+}
+
+/* Неоновый след курсора */
+.cursor-light {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(255,0,150,1) 0%, rgba(255,0,150,0) 60%);
+  mix-blend-mode: screen;
+  filter: blur(30px);
+  z-index: 9999;
 }
