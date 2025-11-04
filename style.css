@@ -132,3 +132,17 @@ body {
   filter: blur(30px);
   z-index: 9999;
 }
+
+/* Анимация появления текста по буквам */
+.animate-text {
+  font-size: 45px;
+  font-weight: bold;
+  display: inline-block;
+  white-space: pre;
+  opacity: 0;
+  animation: fadein 0.5s forwards ease-in;
+}
+
+@keyframes fadein {
+  to { opacity: 1; }
+}
