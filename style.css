@@ -1,17 +1,65 @@
 body {
-  background: #111;
-  color: #fff;
-  font-family: Arial, sans-serif;
-  text-align: center;
+  margin: 0;
+  padding: 0;
+  background: #0d0d0d;
+  color: white;
+  font-family: 'Arial', sans-serif;
 }
 
-.container {
-  margin-top: 150px;
+/* Главный блок */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
-button {
-  padding: 12px 25px;
+.text h1 {
+  font-size: 45px;
+  margin: 0;
+}
+
+.text p {
   font-size: 20px;
-  cursor: pointer;
+  opacity: 0.8;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: white;
+  color: black;
   border-radius: 8px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ffcc00;
+}
+
+/* Анимационный фон */
+.shape {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: linear-gradient(135deg, #ff0066, #5500ff);
+  filter: blur(120px);
+  animation: float 8s infinite alternate ease-in-out;
+}
+
+@keyframes float {
+  0% { transform: translate(-100px, -50px); }
+  100% { transform: translate(120px, 80px); }
+}
+
+/* Раздел проекты */
+#projects {
+  padding: 80px;
+  text-align: center;
+  background: #111;
 }
